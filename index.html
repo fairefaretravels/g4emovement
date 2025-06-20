@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Saneca Broadcast Studio</title>
+  <title>SANECA TV Broadcast Studio</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -51,7 +51,7 @@
       gap: 10px;
       padding: 10px;
     }
-    iframe {
+    iframe, video {
       width: 100%;
       height: 250px;
       border: none;
@@ -59,7 +59,25 @@
     }
     .chat {
       padding: 10px;
-      height: 400px;
+    }
+    .ad-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      background: #1c2128;
+      border-top: 2px solid #30363d;
+    }
+    .ad-box {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .ad-box h3 {
+      margin: 0 0 10px;
+      font-size: 1.2em;
+      color: #58a6ff;
     }
   </style>
 </head>
@@ -72,26 +90,42 @@
 </div>
 
 <div class="button-area">
-  <a href="https://vdo.ninja/?push=g2BdjxL&view=g2BdjxL_hostlink&ssid&room=STV44BROADCAS7&bitrate=1200&label=GUEST_1_STV">🎙 Join as Guest 1</a>
-  <a href="https://vdo.ninja/?push=igmbBfH&view=igmbBfH_hostlink&ssid&room=STV44BROADCAS7&bitrate=1200&label=GUEST_2_STV">🎙 Join as Guest 2</a>
-  <a href="https://vdo.ninja/?push=V4rpGHm&view=V4rpGHm_hostlink&ssid&room=STV44BROADCAS7&bitrate=1200&label=GUEST_3_STV">🎙 Join as Guest 3</a>
-  <a href="https://vdo.ninja/?director=STV44BROADCAS7&showdirector">🎛 Host Control Room</a>
+  <a href="https://vdo.ninja/?push=g2BdjxL&view=g2BdjxL_hostlink&ssid&room=STV44BROADCAS7&bitrate=1200&label=GUEST_1_STV" target="_blank">🎙 Join as Guest 1</a>
+  <a href="https://vdo.ninja/?push=igmbBfH&view=igmbBfH_hostlink&ssid&room=STV44BROADCAS7&bitrate=1200&label=GUEST_2_STV" target="_blank">🎙 Join as Guest 2</a>
+  <a href="https://vdo.ninja/?push=V4rpGHm&view=V4rpGHm_hostlink&ssid&room=STV44BROADCAS7&bitrate=1200&label=GUEST_3_STV" target="_blank">🎙 Join as Guest 3</a>
+  <a href="https://vdo.ninja/?director=STV44BROADCAS7&showdirector" target="_blank">🎛 Host Control Room</a>
 </div>
 
 <div class="grid">
   <iframe src="https://vdo.ninja/?view=g2BdjxL&solo&room=STV44BROADCAS7&label=GUEST_1_STV"></iframe>
   <iframe src="https://vdo.ninja/?view=igmbBfH&solo&room=STV44BROADCAS7&label=GUEST_2_STV"></iframe>
-  <iframe src="https://vdo.ninja/?view=igmbBfH&solo&room=STV44BROADCAS7&label=GUEST_2_STV"></iframe>
+  <iframe src="https://vdo.ninja/?view=V4rpGHm&solo&room=STV44BROADCAS7&label=GUEST_3_STV"></iframe>
   <iframe src="https://vdo.ninja/?director=STV44BROADCAS7&showdirector"></iframe>
+</div>
+
+<!-- AD + PROMO SECTION -->
+<div class="ad-section">
+  <!-- SLEPT ON ARTIST (upload your own MP4 or host it somewhere like GitHub, Dropbox, BunnyStream, etc.) -->
+  <div class="ad-box">
+    <h3>🎤 SLEPT ON ARTIST</h3>
+    <video src="your-music-video.mp4" autoplay loop muted playsinline></video>
+    <!-- Replace 'your-music-video.mp4' with actual file path -->
+  </div>
+
+  <!-- PRODUCT / PROMO (YouTube example with clean embed) -->
+  <div class="ad-box">
+    <h3>📦 PRODUCT / VIDEO PROMO</h3>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0&modestbranding=1&autoplay=1&mute=1&loop=1&playlist=VIDEO_ID" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <!-- Replace VIDEO_ID with the actual YouTube video ID -->
+  </div>
 </div>
 
 <!-- LIVE CHAT SECTION -->
 <div class="chat">
-  <h2>💻 LIVE CHAT</h2>
+  <h2>💬 LIVE CHAT</h2>
   <iframe
     src="https://tlk.io/sanecatv"
-    style="width:100%; height:500px;"
-    frameborder="0">
+    style="width:100%; height:500px; border:0;">
   </iframe>
 </div>
 
