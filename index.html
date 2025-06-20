@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saneca Broadcast Studio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d1117;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #161b22;
+      padding: 1em;
+      text-align: center;
+      font-size: 1.8em;
+      font-weight: bold;
+      border-bottom: 2px solid #30363d;
+    }
+    .instructions {
+      text-align: center;
+      padding: 1em;
+      font-size: 1em;
+      background: #1c2128;
+    }
+    .button-area {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1em;
+      padding: 1em;
+    }
+    .button-area a {
+      background: #238636;
+      padding: 0.8em 1.2em;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .button-area a:hover {
+      background: #2ea043;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 10px;
+      padding: 10px;
+    }
+    iframe {
+      width: 100%;
+      height: 250px;
+      border: none;
+      background: #000;
+    }
+    .chat {
+      padding: 10px;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+
+<header>🎥 SANECA TV Broadcast Studio</header>
+
+<div class="instructions">
+  <p><strong>Instructions:</strong> Co-hosts, just click your button below to join with your camera. When asked, allow access to your microphone and camera.</p>
+</div>
+
+<div class="button-area">
+  <a href="https://vdo.ninja/?push=g2BdjxL&view=g2BdjxL_hostlink&ssid&room=STV44BROADCAS7&bitrate=1200&label=GUEST_1_STV">🎙 Join as Guest 1</a>
+  <a href="https://vdo.ninja/?push=igmbBfH&view=igmbBfH_hostlink&ssid&room=STV44BROADCAS7&bitrate=1200&label=GUEST_2_STV">🎙 Join as Guest 2</a>
+  <a href="https://vdo.ninja/?push=V4rpGHm&view=V4rpGHm_hostlink&ssid&room=STV44BROADCAS7&bitrate=1200&label=GUEST_3_STV">🎙 Join as Guest 3</a>
+  <a href="https://vdo.ninja/?director=STV44BROADCAS7&showdirector">🎛 Host Control Room</a>
+</div>
+
+<div class="grid">
+  <iframe src="https://vdo.ninja/?view=g2BdjxL&solo&room=STV44BROADCAS7&label=GUEST_1_STV"></iframe>
+  <iframe src="https://vdo.ninja/?view=igmbBfH&solo&room=STV44BROADCAS7&label=GUEST_2_STV"></iframe>
+  <iframe src="https://vdo.ninja/?view=igmbBfH&solo&room=STV44BROADCAS7&label=GUEST_2_STV"></iframe>
+  <iframe src="https://vdo.ninja/?director=STV44BROADCAS7&showdirector"></iframe>
+</div>
+
+<div class="code-block">
+  <h2>💻 Live Code Snippet</h2>
+  <pre><code class="language-javascript">
+// Example: A simple greeting function
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+console.log(greet("Saneca")); // Hello, Saneca!
+  </code></pre>
+</div>
+
+<!-- Prism JS -->
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+
+</body>
+</html>
