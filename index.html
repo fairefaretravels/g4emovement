@@ -2,28 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SANECA TV LIVE BROADCAST STUDIO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saneca TV Broadcast Studio</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       background: #0d1117;
       color: #f0f0f0;
       margin: 0;
-      padding: 0;
     }
     header {
       background-color: #161b22;
       padding: 1em;
-      text-align: center;
-      font-size: 1.8em;
-      font-weight: bold;
+      display: flex;
+      align-items: center;
       border-bottom: 2px solid #30363d;
+    }
+    header img {
+      height: 50px;
+      margin-right: 1em;
+    }
+    header h1 {
+      font-size: 1.8em;
+      margin: 0;
     }
     .instructions {
       text-align: center;
       padding: 1em;
-      font-size: 1em;
       background: #1c2128;
     }
     .button-area {
@@ -60,77 +65,88 @@
     .chat {
       padding: 10px;
     }
-    .ad-section {
+    .ads {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      padding: 10px;
+    }
+    .ads a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #238636;
+      color: white;
+      font-weight: bold;
+      padding: 1em;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .ads a:hover {
+      background: #2ea043;
+    }
+    .media-section {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      padding: 20px;
-      background: #1c2128;
-      border-top: 2px solid #30363d;
-    }
-    .ad-box {
-      background: #0d1117;
-      border: 1px solid #30363d;
+      gap: 10px;
       padding: 10px;
-      border-radius: 8px;
     }
-    .ad-box h3 {
-      margin: 0 0 10px;
-      font-size: 1.2em;
-      color: #58a6ff;
+    .media-section h2 {
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
-<header>🎥 SANECA TV Broadcast Studio</header>
+<header>
+  <img src="STV.png" alt="Saneca TV Logo">
+  <h1>SANECA TV Broadcast Studio</h1>
+</header>
 
 <div class="instructions">
-  <p><strong>Instructions:</strong> Co-hosts, just click your button below to join with your camera. When asked, allow access to your microphone and camera.</p>
+  <p><strong>Instructions:</strong> Co-hosts, click your button below to join with your camera. When asked, allow access to your microphone and camera.</p>
 </div>
 
 <div class="button-area">
-  <a href="https://vdo.ninja/?push=g2BdjxL&view=g2BdjxL_hostlink&ssid&room=STV44BROADCAS7&bitrate=1200&label=GUEST_1_STV" target="_blank">🎙 Join as Guest 1</a>
-  <a href="https://vdo.ninja/?push=igmbBfH&view=igmbBfH_hostlink&ssid&room=STV44BROADCAS7&bitrate=1200&label=GUEST_2_STV" target="_blank">🎙 Join as Guest 2</a>
-  <a href="https://vdo.ninja/?push=V4rpGHm&view=V4rpGHm_hostlink&ssid&room=STV44BROADCAS7&bitrate=1200&label=GUEST_3_STV" target="_blank">🎙 Join as Guest 3</a>
-  <a href="https://vdo.ninja/?director=STV44BROADCAS7&showdirector" target="_blank">🎛 Host Control Room</a>
+  <a href="https://vdo.ninja/?push=g2BdjxL&view=g2BdjxL_hostlink&room=STV44BROADCAS7&bitrate=1200">🎙 Guest 1</a>
+  <a href="https://vdo.ninja/?push=igmbBfH&view=igmbBfH_hostlink&room=STV44BROADCAS7&bitrate=1200">🎙 Guest 2</a>
+  <a href="https://vdo.ninja/?push=V4rpGHm&view=V4rpGHm_hostlink&room=STV44BROADCAS7&bitrate=1200">🎙 Guest 3</a>
+  <a href="https://vdo.ninja/?director=STV44BROADCAS7&showdirector">🎛 Host Control Room</a>
 </div>
 
 <div class="grid">
-  <iframe src="https://vdo.ninja/?view=g2BdjxL&solo&room=STV44BROADCAS7&label=GUEST_1_STV"></iframe>
-  <iframe src="https://vdo.ninja/?view=igmbBfH&solo&room=STV44BROADCAS7&label=GUEST_2_STV"></iframe>
-  <iframe src="https://vdo.ninja/?view=V4rpGHm&solo&room=STV44BROADCAS7&label=GUEST_3_STV"></iframe>
+  <iframe src="https://vdo.ninja/?view=g2BdjxL&solo&room=STV44BROADCAS7"></iframe>
+  <iframe src="https://vdo.ninja/?view=igmbBfH&solo&room=STV44BROADCAS7"></iframe>
+  <iframe src="https://vdo.ninja/?view=V4rpGHm&solo&room=STV44BROADCAS7"></iframe>
   <iframe src="https://vdo.ninja/?director=STV44BROADCAS7&showdirector"></iframe>
 </div>
 
-<!-- AD + PROMO SECTION -->
-<div class="ad-section">
-  <!-- SLEPT ON ARTIST (upload your own MP4 or host it somewhere like GitHub, Dropbox, BunnyStream, etc.) -->
-  <div class="ad-box">
-    <h3>🎤 SLEPT ON ARTIST</h3>
-    <video src="https://drive.google.com/file/d/1a7rrqscZY_24NGRkHh4Yo5-x7xdrd832/view?usp=drive_link" autoplay loop muted playsinline></video>
+<div class="media-section">
+  <div>
+    <h2>🎤 SLEPT ON ARTIST</h2>
+    <video autoplay muted loop>
+      <source src="https://www.youtube.com/watch?v=UFHOsQ_msNE" type="video/mp4">
+      
+    </video>
   </div>
-
-  <!-- G4E GRND 4 EVRYTHNG -->
-  <div class="ad-box">
-    <h3>📦 PRODUCT / VIDEO PROMO</h3>
-    <iframe src="https://www.youtube.com/watch?v=UFHOsQ_msNE?rel=0&modestbranding=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <div>
+    <h2>📦 PRODUCT / PROMO</h2>
+    <video autoplay muted loop>
+      <source src="https://jmp.sh/DMj1Tp5u" type="video/mp4">
+     </video>
+  </div>
 </div>
-</div>
-
-<!-- LIVE CHAT SECTION -->
 <div class="chat">
   <h2>💬 LIVE CHAT</h2>
-  <iframe
-    src="https://tlk.io/sanecatv"
-    style="width:100%; height:500px; border:0;">
-  </iframe>
+  <iframe src="https://tlk.io/sanecatv" style="width:100%; height:500px;" frameborder="0"></iframe>
+</div>
 
-  <div class="button-area">
-   <a href="https://fairefaretravels.github.io/agentsanecamack.github.io/" target="_blank">🎙 PLAN YOUR NEXT VACATION 1</a> 
-   <a href="https://fairefaretravels.github.io/affiliate/"_blank">🎙 START YOUR OWN TRAVEL AGENCY TODAY 1</a> 
- </div>
+<div class="ads">
+  <a href="https://formspree.io/f/mrbkljze" target="_blank">📢 RENT ME</a>
+  <a href="https://formspree.io/f/mrbkljze" target="_blank">🤝 BECOME A SPONSOR TODAY</a>
+</div>
 
 </body>
-</html>   
- 
+</html> 
+    
