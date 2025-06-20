@@ -2,33 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Saneca TV Broadcast Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saneca Broadcast Studio</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       background: #0d1117;
       color: #f0f0f0;
       margin: 0;
+      padding: 0;
     }
     header {
       background-color: #161b22;
       padding: 1em;
-      display: flex;
-      align-items: center;
+      text-align: center;
       border-bottom: 2px solid #30363d;
     }
     header img {
-      height: 50px;
-      margin-right: 1em;
-    }
-    header h1 {
-      font-size: 1.8em;
-      margin: 0;
+      height: 60px;
     }
     .instructions {
       text-align: center;
       padding: 1em;
+      font-size: 1em;
       background: #1c2128;
     }
     .button-area {
@@ -59,94 +55,91 @@
     iframe, video {
       width: 100%;
       height: 250px;
-      border: none;
       background: #000;
     }
     .chat {
       padding: 10px;
     }
-    .ads {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 10px;
-      padding: 10px;
-    }
-    .ads a {
+    .banners {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #238636;
-      color: white;
-      font-weight: bold;
+      justify-content: space-around;
       padding: 1em;
-      border-radius: 6px;
+      background: #1c2128;
+    }
+    .banners a {
+      background: #facc15;
+      color: #000;
+      padding: 0.8em 1.5em;
       text-decoration: none;
-      transition: background 0.3s;
+      font-weight: bold;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00000055;
+      transition: all 0.3s ease;
     }
-    .ads a:hover {
-      background: #2ea043;
+    .banners a:hover {
+      background: #fcd34d;
     }
-    .media-section {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 10px;
-      padding: 10px;
+    .media-box {
+      padding: 1em;
+      background: #161b22;
+      margin: 1em;
+      border-radius: 10px;
     }
-    .media-section h2 {
-      text-align: center;
+    .media-box h3 {
+      margin-top: 0;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="STV.png" alt="Saneca TV Logo">
-  <h1>SANECA TV Broadcast Studio</h1>
+  <img src="Untitled design (1).png" alt="STV Logo">
 </header>
 
 <div class="instructions">
-  <p><strong>Instructions:</strong> Co-hosts, click your button below to join with your camera. When asked, allow access to your microphone and camera.</p>
+  <p><strong>Instructions:</strong> Co-hosts, just click your button below to join with your camera. When asked, allow access to your microphone and camera.</p>
 </div>
 
 <div class="button-area">
-  <a href="https://vdo.ninja/?push=g2BdjxL&view=g2BdjxL_hostlink&room=STV44BROADCAS7&bitrate=1200">🎙 Guest 1</a>
-  <a href="https://vdo.ninja/?push=igmbBfH&view=igmbBfH_hostlink&room=STV44BROADCAS7&bitrate=1200">🎙 Guest 2</a>
-  <a href="https://vdo.ninja/?push=V4rpGHm&view=V4rpGHm_hostlink&room=STV44BROADCAS7&bitrate=1200">🎙 Guest 3</a>
+  <a href="https://vdo.ninja/?push=g2BdjxL&view=g2BdjxL_hostlink&ssid&room=STV44BROADCAS7&bitrate=1200&label=GUEST_1_STV">🎙 Join as Guest 1</a>
+  <a href="https://vdo.ninja/?push=igmbBfH&view=igmbBfH_hostlink&ssid&room=STV44BROADCAS7&bitrate=1200&label=GUEST_2_STV">🎙 Join as Guest 2</a>
+  <a href="https://vdo.ninja/?push=V4rpGHm&view=V4rpGHm_hostlink&ssid&room=STV44BROADCAS7&bitrate=1200&label=GUEST_3_STV">🎙 Join as Guest 3</a>
   <a href="https://vdo.ninja/?director=STV44BROADCAS7&showdirector">🎛 Host Control Room</a>
 </div>
 
+<div class="banners">
+  <a href="https://formspree.io/f/mrbkljze" target="_blank">📢 RENT ME</a>
+  <a href="https://formspree.io/f/mrbkljze" target="_blank">⭐ BECOME A SPONSOR TODAY</a>
+</div>
+
 <div class="grid">
-  <iframe src="https://vdo.ninja/?view=g2BdjxL&solo&room=STV44BROADCAS7"></iframe>
-  <iframe src="https://vdo.ninja/?view=igmbBfH&solo&room=STV44BROADCAS7"></iframe>
-  <iframe src="https://vdo.ninja/?view=V4rpGHm&solo&room=STV44BROADCAS7"></iframe>
+  <iframe src="https://vdo.ninja/?view=g2BdjxL&solo&room=STV44BROADCAS7&label=GUEST_1_STV"></iframe>
+  <iframe src="https://vdo.ninja/?view=igmbBfH&solo&room=STV44BROADCAS7&label=GUEST_2_STV"></iframe>
+  <iframe src="https://vdo.ninja/?view=igmbBfH&solo&room=STV44BROADCAS7&label=GUEST_2_STV"></iframe>
   <iframe src="https://vdo.ninja/?director=STV44BROADCAS7&showdirector"></iframe>
 </div>
 
-<div class="media-section">
-  <div>
-    <h2>🎤 SLEPT ON ARTIST</h2>
-    <video autoplay muted loop>
-      <source src="https://www.youtube.com/watch?v=UFHOsQ_msNE" type="video/mp4">
-      
-    </video>
-  </div>
-  <div>
-    <h2>📦 PRODUCT / PROMO</h2>
-    <video autoplay muted loop>
-      <source src="https://jmp.sh/DMj1Tp5u" type="video/mp4">
-     </video>
-  </div>
-</div>
-<div class="chat">
-  <h2>💬 LIVE CHAT</h2>
-  <iframe src="https://tlk.io/sanecatv" style="width:100%; height:500px;" frameborder="0"></iframe>
+<!-- Artist Video Section -->
+<div class="media-box">
+  <h3> SLEPT ON ARTIST</h3>
+  <video src="https://www.youtube.com/watch?v=UFHOsQ_msNE" autoplay muted loop controls></video>
 </div>
 
-<div class="ads">
-  <a href="https://formspree.io/f/mrbkljze" target="_blank">📢 RENT ME</a>
-  <a href="https://formspree.io/f/mrbkljze" target="_blank">🤝 BECOME A SPONSOR TODAY</a>
+<!-- Promo Video Section -->
+<div class="media-box">
+  <h3> PRODUCT / VIDEO PROMO</h3>
+  <video src="https://jmp.sh/DMj1Tp5u" autoplay muted loop controls></video>
+</div>
+
+<!-- LIVE CHAT SECTION -->
+<div class="chat">
+  <h2>💻 LIVE CHAT</h2>
+  <iframe
+    src="https://tlk.io/sanecatv"
+    style="width:100%; height:500px;"
+    frameborder="0">
+  </iframe>
 </div>
 
 </body>
-</html> 
-    
+</html>
