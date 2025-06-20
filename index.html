@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Saneca Broadcast Studio - Join live streams, engage in live chat, and explore promo content.">
+  <meta name="keywords" content="broadcast, live stream, chat, sponsor, video promo">
+  <meta name="author" content="Saneca Broadcast Studio">
   <title>Saneca Broadcast Studio</title>
   <style>
     body {
@@ -52,7 +55,7 @@
       gap: 10px;
       padding: 10px;
     }
-    iframe, video {
+    iframe, .embed-video {
       width: 100%;
       height: 250px;
       background: #000;
@@ -88,12 +91,21 @@
     .media-box h3 {
       margin-top: 0;
     }
+    @media (max-width: 600px) {
+      .button-area a {
+        font-size: 0.9em;
+        padding: 0.6em 1em;
+      }
+      .grid iframe, .chat iframe, .embed-video {
+        height: 180px;
+      }
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="Untitled design (1).png" alt="STV Logo">
+  <img src="Untitled design (1).png" alt="Saneca Broadcast Studio Logo">
 </header>
 
 <div class="instructions">
@@ -113,22 +125,23 @@
 </div>
 
 <div class="grid">
-  <iframe src="https://vdo.ninja/?view=g2BdjxL&solo&room=STV44BROADCAS7&label=GUEST_1_STV"></iframe>
-  <iframe src="https://vdo.ninja/?view=igmbBfH&solo&room=STV44BROADCAS7&label=GUEST_2_STV"></iframe>
-  <iframe src="https://vdo.ninja/?view=igmbBfH&solo&room=STV44BROADCAS7&label=GUEST_2_STV"></iframe>
-  <iframe src="https://vdo.ninja/?director=STV44BROADCAS7&showdirector"></iframe>
+  <iframe src="https://vdo.ninja/?view=g2BdjxL&solo&room=STV44BROADCAS7&label=GUEST_1_STV" title="Guest 1"></iframe>
+  <iframe src="https://vdo.ninja/?view=igmbBfH&solo&room=STV44BROADCAS7&label=GUEST_2_STV" title="Guest 2"></iframe>
+  <iframe src="https://vdo.ninja/?view=V4rpGHm&solo&room=STV44BROADCAS7&label=GUEST_3_STV" title="Guest 3"></iframe>
+  <iframe src="https://vdo.ninja/?director=STV44BROADCAS7&showdirector" title="Host Control Room"></iframe>
 </div>
 
 <!-- Artist Video Section -->
 <div class="media-box">
-  <h3> SLEPT ON ARTIST</h3>
-  <video src="https://www.youtube.com/watch?v=UFHOsQ_msNE" autoplay muted loop controls></video>
+  <h3>SLEPT ON ARTIST</h3>
+  <iframe class="embed-video" src="https://www.youtube.com/watch?v=UFHOsQ_msNE" 
+          title="Slept On Artist Video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
 <!-- Promo Video Section -->
 <div class="media-box">
-  <h3> PRODUCT / VIDEO PROMO</h3>
-  <video src="https://jmp.sh/DMj1Tp5u" autoplay muted loop controls></video>
+  <h3>PRODUCT / VIDEO PROMO</h3>
+   <iframe class="embed-video" src="https://jmp.sh/DMj1Tp5u" allowfullscreen></iframe>
 </div>
 
 <!-- LIVE CHAT SECTION -->
@@ -137,9 +150,12 @@
   <iframe
     src="https://tlk.io/sanecatv"
     style="width:100%; height:500px;"
-    frameborder="0">
+    frameborder="0"
+    title="Live Chat">
+    Your browser does not support iframes.
   </iframe>
 </div>
 
 </body>
 </html>
+  
