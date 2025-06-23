@@ -1,12 +1,12 @@
-# Private Broadcast Website
+# STV Broadcast Website
 
-Welcome to our Private Broadcast Website!  
+Welcome to STV Broadcast Website!  
 This platform is dedicated to exclusive music experiences, private listening sessions, and live podcast hosting. As a private community, we focus on delivering high-quality audio content and interactive sessions for our members.
 
 ## Features
 
 - **Music Streaming:**  
-  Enjoy curated music playlists and exclusive tracks, streamed directly to our private audience.
+  Enjoy curated music playlists and exclusive tracks, streamed directly to our audience.
 
 - **Private Listening Sessions:**  
   Participate in special listening events, including album previews, artist Q&As, and intimate gatherings for music lovers.
@@ -16,10 +16,10 @@ This platform is dedicated to exclusive music experiences, private listening ses
 
 ## Getting Started
 
-Access to this website is private and by invitation only. If you are a member:
+Access to this website is open to all.
 
-1. **Login:**  
-   Use your credentials to sign in.
+1. **Hosting?:**  
+   Simply click the button and go live or hop on as a viewer.
 
 2. **Explore:**  
    Browse upcoming events, join live sessions, and listen to archived content.
