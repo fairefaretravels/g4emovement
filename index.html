@@ -163,23 +163,24 @@
       border-radius: var(--radius);
       padding: 1em;
     }
-    .responsive-iframe-container {
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%;
-      height: 0;
-      margin-bottom: 1em;
-      border-radius: var(--radius);
-      overflow: hidden;
-      background: var(--black);
-      border: 2px solid var(--yellow);
-    }
-    .responsive-iframe-container iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      border: 0;
-      background: var(--black);
+ .responsive-iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #000;
+  border: 2px solid #ffe100;
+}
+.responsive-iframe-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: 0;
+  background: #000;
+}
+}
     }
     .subscribe-section, .promo-section {
       background: var(--black);
@@ -314,16 +315,15 @@
   </div>
 
   <div class="promo-section">
-    <h3>WELCOME TO THE PRIVATE ARTIST HUB</h3>
+    <h3>G4E MIXTAPE RELEASE PARTY AND VIDEO SHOOT GET YOUR TICKETS BELOW</h3>
     <div class="responsive-iframe-container">
-      <iframe
-        src="https://player.vimeo.com/event/5226459/embed"
-        frameborder="0"
-        allow="autoplay; fullscreen; picture-in-picture"
-        allowfullscreen
-        loading="lazy"
-        title="Promo Video: Artist Hub"></iframe>
-    </div>
+  <iframe
+    src="https://player.vimeo.com/event/5226459/embed"
+    allow="autoplay; fullscreen; picture-in-picture"
+    allowfullscreen
+    loading="lazy"
+    title="Promo Video: Artist Hub"></iframe>
+</div>
 
   <div class="chat-section">
     <h2>💻 LIVE CHAT</h2>
