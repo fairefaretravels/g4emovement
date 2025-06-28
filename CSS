@@ -216,7 +216,6 @@ section {
   height: auto;
 }
 
-/* Make chat section taller than video on desktop */
 .chat-section .responsive-iframe-container {
   aspect-ratio: unset;
   padding-bottom: 40%;
