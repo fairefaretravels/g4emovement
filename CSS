@@ -213,8 +213,25 @@ section {
   border-radius: var(--radius);
   overflow: hidden;
   margin: 0 auto;
+  height: auto;
 }
 
+/* Make chat section taller than video on desktop */
+.chat-section .responsive-iframe-container {
+  aspect-ratio: unset;
+  padding-bottom: 40%;
+  min-height: 350px;
+}
+
+/* Make chat MUCH taller on mobile */
+@media (max-width: 700px) {
+  .chat-section .responsive-iframe-container {
+    padding-bottom: 80%;
+    min-height: 300px;
+  }
+}
+
+/* Make sure iframe fills the container */
 .responsive-iframe-container iframe {
   width: 100%;
   height: 100%;
@@ -255,24 +272,19 @@ section {
   text-transform: uppercase;
 }
 
-/* CHAT SECTION */
-.chat-section h2 {
-  color: var(--red);
-  margin-bottom: 0.5em;
-  font-size: 1.3rem;
-}
-
-/* RESPONSIVENESS */
-@media (max-width: 900px) {
-  .shop-banner, .subscribe-section, .promo-section, .live-studio, .chat-section, section {
-    max-width: 98vw;
-  }
-  .responsive-iframe-container {
-    border-radius: 0;
-  }
-}
-
+/* Make G4E RADIO overlay bigger on mobile */
 @media (max-width: 700px) {
+  .bottom-cover {
+    height: 90px;
+    border-radius: 0 0 12px 12px;
+  }
+  .bottom-cover-text {
+    font-size: 1.4rem;
+  }
+  .shop-banner {
+    flex-direction: column;
+    align-items: center;
+  }
   .responsive-iframe-container,
   .live-studio,
   .subscribe-section,
@@ -282,16 +294,27 @@ section {
     border-radius: 0;
     max-width: 100vw;
   }
-  .bottom-cover {
-    height: 50px;
-    border-radius: 0 0 8px 8px;
+}
+
+/* CHAT SECTION */
+.chat-section h2 {
+  color: var(--red);
+  margin-bottom: 0.5em;
+  font-size: 1.3rem;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 900px) {
+  .shop-banner,
+  .subscribe-section,
+  .promo-section,
+  .live-studio,
+  .chat-section,
+  section {
+    max-width: 98vw;
   }
-  .bottom-cover-text {
-    font-size: 1.1rem;
-  }
-  .shop-banner {
-    flex-direction: column;
-    align-items: center;
+  .responsive-iframe-container {
+    border-radius: 0;
   }
 }
 
