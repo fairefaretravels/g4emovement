@@ -3,279 +3,363 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="G4E MOVEMENT - Join live streams, engage in live chat, and explore promo content.">
-  <meta name="keywords" content="broadcast, live stream, chat, sponsor, video promo, g4emovement">
-  <meta name="author" content="G4E MOVEMENT">
+  <meta name="description" content="G4E MOVEMENT - Live streams, chat, promos, events, and exclusive travel deals." />
+  <meta name="keywords" content="broadcast, live stream, chat, sponsor, video promo, g4emovement, travel, podcast, merch, events" />
+  <meta name="author" content="G4E MOVEMENT" />
   <title>G4E MOVEMENT</title>
   <style>
+    :root {
+      --black: #000;
+      --white: #fff;
+      --red: #e3342f;
+      --yellow: #ffe100;
+      --radius: 8px;
+      --shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+    * { box-sizing: border-box; }
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #0d1117;
-      color: #f0f0f0;
+      background: var(--black);
+      color: var(--white);
       margin: 0;
       padding: 0;
+      min-height: 100vh;
     }
     header {
-      background-color: #161b22;
+      background: var(--black);
+      border-bottom: 2px solid var(--red);
       padding: 1em;
       text-align: center;
-      border-bottom: 2px solid #30363d;
     }
     header img {
-      height: 60px;
+      height: 64px;
+      max-width: 90vw;
+      border-radius: var(--radius);
+      border: 2px solid var(--yellow);
+      background: var(--white);
+      padding: 2px;
     }
     .discord-btn-container {
-      width: 100%;
       display: flex;
       justify-content: center;
-      background: #fff;
+      background: var(--white);
       padding: 20px 0;
     }
     .discord-btn {
-      background: #6a0dad;
-      color: #fff;
-      padding: 14px 32px;
+      background: var(--red);
+      color: var(--white);
+      padding: 1em 2em;
       border: none;
-      border-radius: 8px;
-      font-size: 1.3em;
+      border-radius: var(--radius);
+      font-size: 1.2em;
       font-weight: bold;
       text-decoration: none;
-      box-shadow: 0 2px 8px rgba(106,13,173,0.12);
-      transition: background 0.2s;
+      box-shadow: var(--shadow);
+      transition: background 0.2s, transform 0.2s;
       cursor: pointer;
       letter-spacing: 1px;
+      display: inline-block;
     }
     .discord-btn:hover {
-      background: #510a99;
-      color: #fff;
+      background: var(--yellow);
+      color: var(--black);
+      transform: scale(1.05);
+    }
+    .shop-banner {
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      background: var(--yellow);
+      color: var(--black);
+      padding: 1em 0.5em;
+      font-weight: bold;
+      border-radius: var(--radius);
+      box-shadow: 0 0 10px #00000033;
+      margin: 1em auto 0.5em auto;
+      max-width: 700px;
+      flex-wrap: wrap;
+    }
+    .shop-banner a {
+      color: var(--black);
+      background: transparent;
+      text-decoration: none;
+      padding: 0.6em 1.4em;
+      border-radius: var(--radius);
+      transition: background 0.2s;
+      font-weight: bold;
+      border: 2px solid var(--red);
+    }
+    .shop-banner a:hover {
+      background: var(--red);
+      color: var(--white);
+    }
+    .shop-banner form input,
+    .shop-banner form button {
+      margin-left: 0.5em;
+    }
+    .shop-banner input[type="email"] {
+      border-radius: 4px;
+      border: 1px solid var(--red);
+      padding: 0.4em 0.7em;
+      background: var(--white);
+      color: var(--black);
+    }
+    .shop-banner button {
+      background: var(--red);
+      color: var(--white);
+      border: none;
+      padding: 0.4em 1em;
+      border-radius: var(--radius);
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .shop-banner button:hover {
+      background: var(--black);
+      color: var(--yellow);
     }
     .instructions {
       text-align: center;
       padding: 1em;
       font-size: 1em;
-      background: #1c2128;
+      background: var(--red);
+      color: var(--white);
+      border-radius: var(--radius);
+      max-width: 700px;
+      margin: 1em auto;
     }
     .button-area {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 1em;
-      padding: 1em;
+      padding: 1em 0;
+      max-width: 700px;
+      margin: 0 auto;
     }
-    .button-area a, .button {
-      background: #238636;
-      padding: 0.8em 1.2em;
-      color: white;
+    .button-area a {
+      background: var(--black);
+      color: var(--yellow);
       text-decoration: none;
-      border-radius: 6px;
+      padding: 0.8em 1.2em;
+      border-radius: var(--radius);
       font-weight: bold;
-      transition: background 0.3s;
+      border: 2px solid var(--yellow);
+      transition: background 0.2s, color 0.2s, transform 0.2s;
       display: inline-block;
       margin-bottom: 0.5em;
     }
-    .button-area a:hover, .button:hover {
-      background: #2ea043;
+    .button-area a:hover {
+      background: var(--yellow);
+      color: var(--black);
+      border-color: var(--red);
+      transform: scale(1.04);
     }
-    .banners {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
+    .live-studio {
+      max-width: 700px;
+      margin: 1em auto;
+      background: var(--black);
+      border: 2px solid var(--red);
+      border-radius: var(--radius);
       padding: 1em;
-      background: #1c2128;
-    }
-    .banners a {
-      background: #facc15;
-      color: #000;
-      padding: 0.8em 1.5em;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #00000055;
-      transition: all 0.3s ease;
-      margin: 0.5em 0;
-    }
-    .banners a:hover {
-      background: #fcd34d;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      padding: 10px;
-    }
-    .grid iframe {
-      width: 100%;
-      height: 250px;
-      background: #000;
-      border: 0;
-    }
-    .media-grid {
-      display: flex;
-      gap: 2em;
-      justify-content: center;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      margin: 1em 0;
-    }
-    .media-box {
-      flex: 1 1 400px;
-      max-width: 600px;
-      min-width: 280px;
-      background: #161b22;
-      margin: 0.5em;
-      border-radius: 10px;
-      padding: 1em;
-    }
-    .media-box h3 {
-      min-height: 56.25px;
-      margin-top: 0;
     }
     .responsive-iframe-container {
       position: relative;
       width: 100%;
       padding-bottom: 56.25%;
       height: 0;
-      overflow: hidden;
       margin-bottom: 1em;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--black);
+      border: 2px solid var(--yellow);
     }
     .responsive-iframe-container iframe {
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
       border: 0;
+      background: var(--black);
     }
-    .chat {
-      padding: 10px;
+    .subscribe-section, .promo-section {
+      background: var(--black);
+      border: 2px solid var(--yellow);
+      border-radius: var(--radius);
+      margin: 1em auto;
+      padding: 1em;
+      max-width: 700px;
+    }
+    .subscribe-section h3, .promo-section h3 {
+      color: var(--yellow);
+    }
+    .promo-section div {
+      color: var(--white);
+    }
+    .chat-section {
+      max-width: 700px;
+      margin: 1em auto;
+      background: var(--black);
+      border: 2px solid var(--red);
+      border-radius: var(--radius);
+      padding: 1em;
+    }
+    .chat-section h2 {
+      margin-top: 0;
+      color: var(--yellow);
+    }
+    section {
+      margin-bottom: 1.5em;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .actions-section {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      background: var(--black);
+      border: 2px solid var(--yellow);
+      border-radius: var(--radius);
+      padding: 1em;
+    }
+    .actions-section h2 {
+      color: var(--red);
+      margin-bottom: 0.5em;
+    }
+    .actions-section a.button {
+      width: fit-content;
+      margin: 0 auto;
+      background: var(--yellow);
+      color: var(--black);
+      border: 2px solid var(--red);
+      border-radius: var(--radius);
+      font-weight: bold;
+      text-decoration: none;
+      padding: 0.7em 1.4em;
+      transition: background 0.2s, color 0.2s, border 0.2s;
+    }
+    .actions-section a.button:hover {
+      background: var(--red);
+      color: var(--white);
+      border-color: var(--yellow);
     }
     @media (max-width: 900px) {
-      .media-grid {
-        flex-direction: column;
-        gap: 1em;
-        align-items: stretch;
+      .shop-banner, .subscribe-section, .promo-section, .live-studio, .chat-section, section {
+        max-width: 98vw;
       }
     }
     @media (max-width: 600px) {
-      .button-area a, .button {
-        font-size: 0.9em;
+      .discord-btn, .button-area a {
+        font-size: 1em;
         padding: 0.6em 1em;
       }
-      .grid iframe, .chat iframe, .responsive-iframe-container {
-        height: 180px;
-        min-height: 180px;
-      }
-      .banners {
+      .shop-banner {
         flex-direction: column;
         align-items: center;
       }
     }
-    section {
-      margin-bottom: 1.5em;
-    }
-    h2 {
-      margin-top: 1em;
-    }
   </style>
 </head>
 <body>
-
   <header>
-    <img src="Copy of G4E CONCERT (Website) (2).png" alt="G4E MOVEMENT">
+    <img src="Copy of G4E CONCERT (Website) (2).png" alt="G4E MOVEMENT logo" />
   </header>
 
   <div class="discord-btn-container">
-    <a class="discord-btn" href="https://discord.gg/eJuQUJN3" target="_blank" rel="noopener">Join My Discord Server</a>
+    <a class="discord-btn" href="https://discord.gg/eJuQUJN3" target="_blank" rel="noopener noreferrer">Join Our Discord Community</a>
   </div>
 
-  <div class="banners">
-    <a href="https://www.bonfire.com/welcome/de53f58d87554/">SHOP NOW</a>
-    <form action="https://formspree.io/f/mrbkljze" method="POST">
-  <input type="email" name="email" placeholder="Your email" required>
-  <button type="submit">Send</button>
-</form>
+  <div class="shop-banner">
+    <a href="https://www.bonfire.com/welcome/de53f58d87554/" target="_blank" rel="noopener noreferrer">SHOP G4E MERCH</a>
+    <form action="https://formspree.io/f/mrbkljze" method="POST" style="display:inline-flex; gap:0.5em; align-items:center;">
+      <label for="email" style="font-size:0.95em;">Stay Updated:</label>
+      <input id="email" type="email" name="email" placeholder="Your email" required>
+      <button type="submit">Send</button>
+    </form>
+  </div>
 
   <div class="instructions">
-    <p><strong>Instructions:</strong> Co-hosts, just click your button below to join with your camera. When asked, allow access to your microphone and camera.</p>
+    <strong>Instructions:</strong> Co-hosts, click your button below to join with your camera. When prompted, allow access to your microphone and camera.
   </div>
 
   <div class="button-area">
-    <a href="https://vdo.ninja/?push=g2BdjxL&view=g2BdjxL_hostlink&ssid&room=STV44BROADCAS7&bitrate=1200&label=GUEST_1_STV">🎙 Join as Guest 1</a>
-    <a href="https://vdo.ninja/?push=igmbBfH&view=igmbBfH_hostlink&ssid&room=STV44BROADCAS7&bitrate=1200&label=GUEST_2_STV">🎙 Join as Guest 2</a>
-    <a href="https://vdo.ninja/?push=V4rpGHm&view=V4rpGHm_hostlink&ssid&room=STV44BROADCAS7&bitrate=1200&label=GUEST_3_STV">🎙 Join as Guest 3</a>
-    <a href="https://vdo.ninja/?director=STV44BROADCAS7&showdirector">HOST ONLY</a>
+    <a href="https://vdo.ninja/?push=g2BdjxL&view=g2BdjxL_hostlink&ssid&room=STV44BROADCAS7&bitrate=1200&label=GUEST_1_STV" target="_blank" rel="noopener noreferrer" title="Join as Guest 1">🎙 Guest 1</a>
+    <a href="https://vdo.ninja/?push=igmbBfH&view=igmbBfH_hostlink&ssid&room=STV44BROADCAS7&bitrate=1200&label=GUEST_2_STV" target="_blank" rel="noopener noreferrer" title="Join as Guest 2">🎙 Guest 2</a>
+    <a href="https://vdo.ninja/?push=V4rpGHm&view=V4rpGHm_hostlink&ssid&room=STV44BROADCAS7&bitrate=1200&label=GUEST_3_STV" target="_blank" rel="noopener noreferrer" title="Join as Guest 3">🎙 Guest 3</a>
+    <a href="https://vdo.ninja/?director=STV44BROADCAS7&showdirector" target="_blank" rel="noopener noreferrer" title="Host Only">HOST ONLY</a>
   </div>
 
-  <div class="grid">
-    <iframe src="https://vdo.ninja/?scene&room=STV44BROADCAS7&showdirector&cover&margin&sl&sas" title="LIVE STUDIO"></iframe>
-
-    
-  </div>
-
- 
-  
-  
-  
-  
-  
-  <!-- Artist and Promo Video Section -->
-  <div class="media-grid">
-    <!-- Artist Video Section (YouTube) -->
-    <div class="media-box">
-      <h3>SUBSCRIBE TO G4E MOVEMENT HOME OF THE 'JUS MA OPINION PODCAST'</h3>
-      <div class="responsive-iframe-container">
-        <iframe
-          src="https://www.youtube.com/embed/UFHOsQ_msNE?si=xubW8iTC1TmocLy6"
-          title="G4E MOVEMENT - YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          referrerpolicy="strict-origin-when-cross-origin">
-        </iframe>
-      </div>
-    </div>
-    <!-- Promo Video Section (Vimeo) -->
-    <div style="padding:56.25% 0 0 0;position:relative;">
-  <iframe src="https://player.vimeo.com/event/5226459/embed" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-</div>
-title="WELCOME TO THE PRIVATE ARTIST HUB. BE SURE YO CONNECT WITH US VIA CHAT LIVE">
-</iframe>
-      </div>
+  <div class="live-studio">
+    <div class="responsive-iframe-container">
+      <iframe src="https://vdo.ninja/?scene&room=STV44BROADCAS7&showdirector&cover&margin&sl&sas"
+        title="LIVE STUDIO"
+        loading="lazy"
+        allow="camera; microphone; fullscreen"
+        referrerpolicy="no-referrer"
+        aria-label="G4E Movement Live Studio"></iframe>
     </div>
   </div>
 
-  <!-- LIVE CHAT SECTION -->
-  <div class="chat">
+  <div class="subscribe-section">
+    <h3>SUBSCRIBE TO G4E MOVEMENT HOME OF THE 'JUS MA OPINION PODCAST'</h3>
+    <div class="responsive-iframe-container">
+      <iframe
+        src="https://www.youtube.com/embed/UFHOsQ_msNE?si=xubW8iTC1TmocLy6"
+        title="G4E MOVEMENT - YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+  </div>
+
+  <div class="promo-section">
+    <h3>WELCOME TO THE PRIVATE ARTIST HUB</h3>
+    <div class="responsive-iframe-container">
+      <iframe
+        src="https://player.vimeo.com/event/5226459/embed"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        loading="lazy"
+        title="Promo Video: Artist Hub"></iframe>
+    </div>
+    <div style="text-align:center; font-size:0.95em;">Be sure to connect with us via live chat below!</div>
+  </div>
+
+  <div class="chat-section">
     <h2>💻 LIVE CHAT</h2>
-    <iframe
-      src="https://tlk.io/sanecatv"
-      style="width:100%; height:500px;"
-      frameborder="0"
-      title="Live Chat">
-      Your browser does not support iframes.
-    </iframe>
-
-
-    <section>
-      <h2>PLAN YOUR NEXT VACATION</h2>
-      <a href="https://fairefaretravels.github.io/agentsanecamack.github.io/" class="button">BEST DEALS ONLINE</a>
-    </section>
-
-    <section>
-      <h2>START YOUR OWN TRAVEL AGENCY</h2>
-      <a href="https://fairefaretravels.github.io/affiliate/" class="button">BECOME YOUR OWN BOSS</a>
-    </section>
-
-    <section>
-      <h2>GRND 4 EVRYTHNG</h2>
-    </section>
-
-    <section>
-      <h2>SPONSORED BY GIVE-A-GIFT NON PROFIT</h2>
-    </section>
-
-     <section>
-      <h2>G4E EVENTS - G4E MIXTAPE RELEASE</h2>
-        <a href="https://www.eventbrite.com/e/g4e-mixtape-release-party-tickets-1442724871929?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl"   class="button">FACEBOOK EVENTBRITE</a>
-    </section>
+    <div class="responsive-iframe-container" style="padding-bottom:40%;">
+      <iframe
+        src="https://tlk.io/sanecatv"
+        title="Live Chat"
+        frameborder="0"
+        loading="lazy"
+        aria-label="Join live chat here"></iframe>
+    </div>
   </div>
 
+  <section class="actions-section">
+    <h2>GRND 4 EVRYTHNG</h2>
+  </section>
+  
+  <section class="actions-section">
+    <h2>G4E EVENTS - G4E MIXTAPE RELEASE</h2>
+    <a href="https://www.eventbrite.com/e/g4e-mixtape-release-party-tickets-1442724871929?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=escb" class="button" target="_blank" rel="noopener noreferrer">GET TICKETS</a>
+  </section>
+  
+  <section class="actions-section">
+    <h2>PLAN YOUR NEXT VACATION</h2>
+    <a href="https://fairefaretravels.github.io/agentsanecamack.github.io/" class="button" target="_blank" rel="noopener noreferrer">BEST DEALS ONLINE</a>
+  </section>
+
+  <section class="actions-section">
+    <h2>START YOUR OWN TRAVEL AGENCY</h2>
+    <a href="https://fairefaretravels.github.io/affiliate/" class="button" target="_blank" rel="noopener noreferrer">BECOME YOUR OWN BOSS</a>
+  </section>
+
+    <section class="actions-section">
+    <h2>SPONSORED BY GIVE-A-GIFT NON PROFIT</h2>
+  </section>
 </body>
 </html>
