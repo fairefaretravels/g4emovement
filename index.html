@@ -9,255 +9,223 @@
   <title>G4E MOVEMENT</title>
   <style>
     :root {
-      --black: #000;
-      --white: #fff;
-      --red: #e3342f;
-      --yellow: #ffe100;
-      --radius: 8px;
-      --shadow: 0 2px 8px rgba(0,0,0,0.12);
-    }
-    * { box-sizing: border-box; }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: var(--black);
-      color: var(--white);
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-    }
-    header {
-      background: var(--black);
-      border-bottom: 2px solid var(--red);
-      padding: 1em;
-      text-align: center;
-    }
-    header img {
-      height: 64px;
-      max-width: 90vw;
-      border-radius: var(--radius);
-      border: 2px solid var(--yellow);
-      background: var(--white);
-      padding: 2px;
-    }
-    .discord-btn-container {
-      display: flex;
-      justify-content: center;
-      background: var(--white);
-      padding: 20px 0;
-    }
-    .discord-btn {
-      background: var(--red);
-      color: var(--white);
-      padding: 1em 2em;
-      border: none;
-      border-radius: var(--radius);
-      font-size: 1.2em;
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: var(--shadow);
-      transition: background 0.2s, transform 0.2s;
-      cursor: pointer;
-      letter-spacing: 1px;
-      display: inline-block;
-    }
-    .discord-btn:hover {
-      background: var(--yellow);
-      color: var(--black);
-      transform: scale(1.05);
-    }
-    .shop-banner {
-      display: flex;
-      justify-content: center;
-      gap: 1em;
-      background: var(--yellow);
-      color: var(--black);
-      padding: 1em 0.5em;
-      font-weight: bold;
-      border-radius: var(--radius);
-      box-shadow: 0 0 10px #00000033;
-      margin: 1em auto 0.5em auto;
-      max-width: 700px;
-      flex-wrap: wrap;
-    }
-    .shop-banner a {
-      color: var(--black);
-      background: transparent;
-      text-decoration: none;
-      padding: 0.6em 1.4em;
-      border-radius: var(--radius);
-      transition: background 0.2s;
-      font-weight: bold;
-      border: 2px solid var(--red);
-    }
-    .shop-banner a:hover {
-      background: var(--red);
-      color: var(--white);
-    }
-    .shop-banner form input,
-    .shop-banner form button {
-      margin-left: 0.5em;
-    }
-    .shop-banner input[type="email"] {
-      border-radius: 4px;
-      border: 1px solid var(--red);
-      padding: 0.4em 0.7em;
-      background: var(--white);
-      color: var(--black);
-    }
-    .shop-banner button {
-      background: var(--red);
-      color: var(--white);
-      border: none;
-      padding: 0.4em 1em;
-      border-radius: var(--radius);
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .shop-banner button:hover {
-      background: var(--black);
-      color: var(--yellow);
-    }
-    .instructions {
-      text-align: center;
-      padding: 1em;
-      font-size: 1em;
-      background: var(--red);
-      color: var(--white);
-      border-radius: var(--radius);
-      max-width: 700px;
-      margin: 1em auto;
-    }
-    .button-area {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1em;
-      padding: 1em 0;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    .button-area a {
-      background: var(--black);
-      color: var(--yellow);
-      text-decoration: none;
-      padding: 0.8em 1.2em;
-      border-radius: var(--radius);
-      font-weight: bold;
-      border: 2px solid var(--yellow);
-      transition: background 0.2s, color 0.2s, transform 0.2s;
-      display: inline-block;
-      margin-bottom: 0.5em;
-    }
-    .button-area a:hover {
-      background: var(--yellow);
-      color: var(--black);
-      border-color: var(--red);
-      transform: scale(1.04);
-    }
-    .live-studio {
-      max-width: 700px;
-      margin: 1em auto;
-      background: var(--black);
-      border: 2px solid var(--red);
-      border-radius: var(--radius);
-      padding: 1em;
-    }
- .responsive-iframe-container {
+  --black: #000;
+  --white: #fff;
+  --red: #e3342f;
+  --yellow: #ffe100;
+  --radius: 8px;
+  --shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--black);
+  color: var(--white);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+header {
+  background: var(--black);
+  border-bottom: 2px solid var(--red);
+  padding: 1em;
+  text-align: center;
+}
+
+header img {
+  height: 64px;
+  max-width: 90vw;
+  border-radius: var(--radius);
+  border: 2px solid var(--yellow);
+  background: var(--white);
+  padding: 2px;
+}
+
+.discord-btn-container {
+  display: flex;
+  justify-content: center;
+  background: var(--white);
+  padding: 20px 0;
+}
+
+.discord-btn {
+  background: var(--red);
+  color: var(--white);
+  padding: 1em 2em;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition: background 0.2s, transform 0.2s;
+  cursor: pointer;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
+.discord-btn:hover {
+  background: var(--yellow);
+  color: var(--black);
+  transform: scale(1.05);
+}
+
+.shop-banner {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 1em 0.5em;
+  font-weight: bold;
+  border-radius: var(--radius);
+  box-shadow: 0 0 10px #00000033;
+  margin: 1em auto 0.5em auto;
+  max-width: 700px;
+  flex-wrap: wrap;
+}
+
+.shop-banner a {
+  color: var(--black);
+  background: transparent;
+  text-decoration: none;
+  padding: 0.6em 1.4em;
+  border-radius: var(--radius);
+  transition: background 0.2s;
+  font-weight: bold;
+  border: 2px solid var(--red);
+}
+
+.shop-banner a:hover {
+  background: var(--red);
+  color: var(--white);
+}
+
+.shop-banner form input,
+.shop-banner form button {
+  margin-left: 0.5em;
+}
+
+.shop-banner input[type="email"] {
+  border-radius: 4px;
+  border: 1px solid var(--red);
+  padding: 0.4em 0.7em;
+  background: var(--white);
+  color: var(--black);
+}
+
+.shop-banner button {
+  background: var(--red);
+  color: var(--white);
+  border: none;
+  padding: 0.4em 1em;
+  border-radius: var(--radius);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.shop-banner button:hover {
+  background: var(--black);
+  color: var(--yellow);
+}
+
+.instructions {
+  text-align: center;
+  padding: 1em;
+  font-size: 1em;
+  background: var(--red);
+  color: var(--white);
+  border-radius: var(--radius);
+  max-width: 700px;
+  margin: 1em auto;
+}
+
+.button-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.button-area a {
+  background: var(--black);
+  color: var(--yellow);
+  text-decoration: none;
+  padding: 0.8em 1.2em;
+  border-radius: var(--radius);
+  font-weight: bold;
+  border: 2px solid var(--yellow);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  display: inline-block;
+  margin-bottom: 0.5em;
+}
+
+.button-area a:hover {
+  background: var(--yellow);
+  color: var(--black);
+  border-color: var(--red);
+  transform: scale(1.04);
+}
+
+/* --- BORDERS REMOVED BELOW THIS LINE FOR MAIN CONTENT SECTIONS --- */
+.live-studio,
+.subscribe-section,
+.promo-section,
+.chat-section,
+.actions-section,
+.responsive-iframe-container,
+.responsive-iframe-container iframe {
+  border: none !important;
+  border-radius: 8px;
+  background: #000;
+}
+
+/* Responsive video container */
+.responsive-iframe-container {
   position: relative;
   width: 100%;
   padding-bottom: 56.25%; /* 16:9 ratio */
   height: 0;
   overflow: hidden;
-  border-radius: 8px;
-  background: #000;
-  border: 2px solid #ffe100;
 }
+
 .responsive-iframe-container iframe {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  border: 0;
   background: #000;
 }
+
+/* Section styling below buttons */
+section {
+  margin-bottom: 1.5em;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
-    }
-    .subscribe-section, .promo-section {
-      background: var(--black);
-      border: 2px solid var(--yellow);
-      border-radius: var(--radius);
-      margin: 1em auto;
-      padding: 1em;
-      max-width: 700px;
-    }
-    .subscribe-section h3, .promo-section h3 {
-      color: var(--yellow);
-    }
-    .promo-section div {
-      color: var(--white);
-    }
-    .chat-section {
-      max-width: 700px;
-      margin: 1em auto;
-      background: var(--black);
-      border: 2px solid var(--red);
-      border-radius: var(--radius);
-      padding: 1em;
-    }
-    .chat-section h2 {
-      margin-top: 0;
-      color: var(--yellow);
-    }
-    section {
-      margin-bottom: 1.5em;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .actions-section {
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-      background: var(--black);
-      border: 2px solid var(--yellow);
-      border-radius: var(--radius);
-      padding: 1em;
-    }
-    .actions-section h2 {
-      color: var(--red);
-      margin-bottom: 0.5em;
-    }
-    .actions-section a.button {
-      width: fit-content;
-      margin: 0 auto;
-      background: var(--yellow);
-      color: var(--black);
-      border: 2px solid var(--red);
-      border-radius: var(--radius);
-      font-weight: bold;
-      text-decoration: none;
-      padding: 0.7em 1.4em;
-      transition: background 0.2s, color 0.2s, border 0.2s;
-    }
-    .actions-section a.button:hover {
-      background: var(--red);
-      color: var(--white);
-      border-color: var(--yellow);
-    }
-    @media (max-width: 900px) {
-      .shop-banner, .subscribe-section, .promo-section, .live-studio, .chat-section, section {
-        max-width: 98vw;
-      }
-    }
-    @media (max-width: 600px) {
-      .discord-btn, .button-area a {
-        font-size: 1em;
-        padding: 0.6em 1em;
-      }
-      .shop-banner {
-        flex-direction: column;
-        align-items: center;
-      }
+
+@media (max-width: 900px) {
+  .shop-banner, .subscribe-section, .promo-section, .live-studio, .chat-section, section {
+    max-width: 98vw;
+  }
+}
+@media (max-width: 600px) {
+  .discord-btn, .button-area a {
+    font-size: 1em;
+    padding: 0.6em 1em;
+  }
+  .shop-banner {
+    flex-direction: column;
+    align-items: center;
+  }
+}
     }
   </style>
 </head>
